@@ -40,7 +40,7 @@ public class Students {
     }
 
     @PutMapping("/{firstName}")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public Student updateStudent(
             @PathVariable(name = "firstName") String firstName,
             @RequestBody Student newStudent) {
