@@ -31,9 +31,9 @@ public class Languages {
     @GetMapping("/{name}")
     @ResponseStatus(HttpStatus.OK)
     public Language getLanguage(@PathVariable(name = "name") String name) {
-        for (Language s : languages) {
-            if (s.getName().equals(name)) {
-                return s;
+        for (Language l : languages) {
+            if (l.getName().equals(name)) {
+                return l;
             }
         }
         return null;
